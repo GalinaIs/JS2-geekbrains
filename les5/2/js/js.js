@@ -1,8 +1,8 @@
 /**
- * Класс CommentClass отвечает за корректное отображение отзывов, обработку их и получение-отправку на сервер.
+ * Класс Comment отвечает за корректное отображение отзывов, обработку их и получение-отправку на сервер.
  * @constructor
  */
-var CommentClass = function () {
+var Comment = function () {
     var self = this;
 
     this.getIdComment();
@@ -31,13 +31,13 @@ var CommentClass = function () {
  * Метод класса получает id для слеующего комментария по количеству отзывов, хранящихся на сервере - считаем, 
  * что все отзывы идут по порядку и начинаются с 0.
  */
-CommentClass.prototype.getIdComment = function () {
-    var self = this;
+Comment.prototype.getIdComment = function () {
     $.ajax({
         url: 'http://localhost:3000/full_list_comments',
+        context: this,
         dataType: 'json',
         success: function (data) {
-            self.idComment = data.length;
+            this.idComment = data.length;
         }
     })
 }
@@ -46,10 +46,10 @@ CommentClass.prototype.getIdComment = function () {
  * Метод класса для проверки данных формы перед отправкой комментария пользователя.
  * @returns {boolean} возвращает true, если поля заполнены верно, в противном случае - false.
  */
-CommentClass.prototype.checkForm = function () {
-    var checkedName = this.checkName($('#user_name')[0].value);
-    var checkedPhone = this.checkPhone($('#user_phone')[0].value);
-    var checkedComment = this.checkComment($('#user_comment')[0].value);
+Comment.prototype.checkForm = function () {
+    var checkedName = this.checkName($('#user_name').val());
+    var checkedPhone = this.checkPhone($('#user_phone').val());
+    var checkedComment = this.checkComment($('#user_comment').val());
 
     if (checkedName && checkedPhone && checkedComment) {
         return true;
@@ -63,9 +63,8 @@ CommentClass.prototype.checkForm = function () {
  * @param {string} name Функция получает проверяемое значение.
  * @returns {boolean} возвращает true, если поле заполнены верно, в противном случае - false.
  */
-CommentClass.prototype.checkName = function (name) {
-    var result;
-    name.length >= 1 ? result = true : result = false;
+Comment.prototype.checkName = function (name) {
+    var result = name.length >= 1;
 
     this.addInformationAboutError($("#user_name"), $("#user_name + .error"), "Поле имя не должно быть пустым", result);
 
@@ -77,7 +76,7 @@ CommentClass.prototype.checkName = function (name) {
  * @param {string} phone Функция получает проверяемое значение.
  * @returns {boolean} возвращает true, если поле заполнены верно, в противном случае - false.
  */
-CommentClass.prototype.checkPhone = function (phone) {
+Comment.prototype.checkPhone = function (phone) {
     var pattern = /^\+7\-9\d{2}\-\d{3}\-\d{2}\-\d{2}$/;
     var result = pattern.test(phone);
 
@@ -92,7 +91,7 @@ CommentClass.prototype.checkPhone = function (phone) {
  * @param {string} comment Функция получает проверяемое значение.
  * @returns {boolean} возвращает true, если поле заполнены верно, в противном случае - false.
  */
-CommentClass.prototype.checkComment = function (comment) {
+Comment.prototype.checkComment = function (comment) {
     var result;
     comment.length >= 1 ? result = true : result = false;
 
@@ -111,7 +110,7 @@ CommentClass.prototype.checkComment = function (comment) {
  * @param {string} textError Сообщение об ошибке.
  * @param {bollean} resultChecked Результат проверки.
  */
-CommentClass.prototype.addInformationAboutError = function (inputElement, divElement, textError, resultChecked) {
+Comment.prototype.addInformationAboutError = function (inputElement, divElement, textError, resultChecked) {
 
     if (resultChecked) {
         inputElement.addClass('checked_input');
@@ -133,18 +132,20 @@ CommentClass.prototype.addInformationAboutError = function (inputElement, divEle
  * 2. Добавляем отзыв в список отзывов для проверки на сервер.
  * 3. Добавляем отзыв в полный список всех комментариев на сервере.
  */
-CommentClass.prototype.postInfoToServer = function () {
+Comment.prototype.postInfoToServer = function () {
 
-    var userName = $('#user_name')[0].value;
-    var userPhone = $('#user_phone')[0].value;
-    var userComment = $('#user_comment')[0].value;
+    var userName = $('#user_name').val();
+    var userPhone = $('#user_phone').val();
+    var userComment = $('#user_comment').val();
     var result = false;
     var ind;
-    var self = this;
+    /*var self = this;*/
 
     $.ajax({
         url: 'http://localhost:3000/user',
         dataType: 'json',
+        context: this,
+
         success: function (data) {
             for (ind = 0; ind < data.length; ind++) {
                 if ((data[ind].name == userName) && (data[ind].number_phone == userPhone)) {
@@ -169,7 +170,7 @@ CommentClass.prototype.postInfoToServer = function () {
                 idUser = data[ind].id;
             }
             var newComment = {
-                id: self.idComment,
+                id: this.idComment,
                 id_user: idUser,
                 text: userComment
             };
@@ -192,7 +193,7 @@ CommentClass.prototype.postInfoToServer = function () {
                 }
             });
             var fullNewComment = {
-                id: self.idComment,
+                id: this.idComment,
                 id_user: idUser,
                 text: userComment,
                 statys: 'verify'
@@ -202,8 +203,8 @@ CommentClass.prototype.postInfoToServer = function () {
                 url: 'http://localhost:3000/full_list_comments',
                 data: fullNewComment,
             });
-            self.idComment++;
-            self.renderCommentForVerify();
+            this.idComment++;
+            this.renderCommentForVerify();
         }
     });
 }
@@ -211,7 +212,7 @@ CommentClass.prototype.postInfoToServer = function () {
 /**
  * Метод класса, который отвечает за отображение отзыва, который подлежит модерации.
  */
-CommentClass.prototype.renderCommentForVerify = function () {
+Comment.prototype.renderCommentForVerify = function () {
     $.ajax({
         url: 'http://localhost:3000/add',
         dataType: 'json',
@@ -247,24 +248,25 @@ CommentClass.prototype.renderCommentForVerify = function () {
  * 2. Статус отзыва в полном списке всех комментариев на сервере меняется на "submit".
  * 3. Отзыв удаляется из списка отзывов для проверки на сервере.
  */
-CommentClass.prototype.submitComment = function () {
+Comment.prototype.submitComment = function () {
     var newComment = {
         id: $('#info_about_comment div').attr('data-id'),
         text: $('#info_about_comment div').attr('data-text')
     };
 
-    var self = this;
+    /*var self = this;*/
 
     $.ajax({
         type: 'POST',
         url: 'http://localhost:3000/list',
+        context: this,
         data: newComment,
 
         success: function () {
             var answerServer = {
                 result: 1
             };
-            self.renderCommentForView();
+            this.renderCommentForView();
         },
 
         error: function (errorInfo) {
@@ -287,9 +289,10 @@ CommentClass.prototype.submitComment = function () {
     $.ajax({
         type: 'DELETE',
         url: 'http://localhost:3000/add/' + $('#info_about_comment div').attr('data-id'),
+        context: this,
 
         success: function () {
-            self.renderCommentForVerify();
+            this.renderCommentForVerify();
         },
     });
 }
@@ -299,8 +302,8 @@ CommentClass.prototype.submitComment = function () {
  * 1. Статус отзыва в полном списке всех комментариев на сервере меняется на "delete".
  * 2. Отзыв удаляется из списка отзывов для проверки на сервере.
  */
-CommentClass.prototype.deleteComment = function () {
-    var self = this;
+Comment.prototype.deleteComment = function () {
+    /*var self = this;*/
 
     $.ajax({
         type: 'PATCH',
@@ -313,9 +316,10 @@ CommentClass.prototype.deleteComment = function () {
     $.ajax({
         type: 'DELETE',
         url: 'http://localhost:3000/add/' + $('#info_about_comment div').attr('data-id'),
+        context: this,
 
         success: function () {
-            self.renderCommentForVerify();
+            this.renderCommentForVerify();
         },
     });
 }
@@ -323,7 +327,7 @@ CommentClass.prototype.deleteComment = function () {
 /**
  * Метод класса, который отвечает за отображение всех отзывов на сайте, которые прошли модерацию.
  */
-CommentClass.prototype.renderCommentForView = function () {
+Comment.prototype.renderCommentForView = function () {
     $.ajax({
         url: 'http://localhost:3000/list',
         dataType: 'json',
@@ -359,5 +363,5 @@ CommentClass.prototype.renderCommentForView = function () {
 
 
 $(document).ready(function () {
-    var my_comment = new CommentClass();
+    new Comment();
 });
