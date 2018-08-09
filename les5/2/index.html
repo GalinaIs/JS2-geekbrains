@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 5-2</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form id="add_comment">
+        <h2>Добавить отзыв:</h2>
+        <h3>Введите свои данные</h3>
+        <label>Имя</label>
+        <input type="text" id="user_name">
+        <div class="error"></div>
+        <label>Номер телефона</label>
+        <input type="text" id="user_phone">
+        <div class="error"></div>
+        <h3>Оставить отзыв:</h3>
+        <textarea rows="10" id="user_comment"></textarea>
+        <div class="error"></div>
+        <button>Отправить отзыв</button>
+    </form>
+    <hr>
+    <form id="verify_comment">
+        <h2>Рассмотреть отзыв:</h2>
+        <div id="info_about_comment"></div>
+        <div class="flex_button">
+            <button id="add_comment_button">Одобрить отзыв</button>
+            <button id="remove_comment_button">Удалить отзыв</button>
+        </div>
+    </form>
+    <hr>
+    <div id="block_all_comments">
+        <h2>Отзывы о нас</h2>
+        <div id="all_comments"></div>
+    </div>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
