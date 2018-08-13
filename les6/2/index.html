@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Форма с валидацией полей</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <h2>Форма обратной связи</h2>
+    <form id="my_form">
+        <div class="for_validation">
+            <input id="name" type="text" placeholder="Имя">
+            <div class="error"></div>
+        </div>
+        <div class="for_validation">
+            <input id="phone" type="text" placeholder="Телефон">
+            <div class="error"></div>
+        </div>
+        <div class="for_validation">
+            <input id="email" type="text" placeholder="E-mail">
+            <div class="error"></div>
+        </div>
+        <div class="for_validation">
+            <input id="data_birth" type="text" placeholder="Дата рождения">
+            <div class="error"></div>
+        </div>
+        <textarea rows="10" name="text" placeholder="Текст"></textarea>
+        <button>Отправить</button>
+    </form>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
