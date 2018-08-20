@@ -1,0 +1,27 @@
+{
+  "name": "les7",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-minify-css": "^1.2.4",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.5",
+    "gulp-util": "^3.0.8"
+  },
+  "description": ""
+}
