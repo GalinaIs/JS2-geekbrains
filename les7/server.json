@@ -1,0 +1,529 @@
+{
+  "product": [
+    {
+      "id": "1",
+      "path_img": "images/products/img1.jpg",
+      "name": "Mango  People  T-shirt1",
+      "cost": "52.00",
+      "id_category": "2",
+      "range": "4.5",
+      "category_name": [
+        "Accessories",
+        "Bags"
+      ],
+      "brand": [
+        "Mango",
+        "Mango1"
+      ],
+      "designer": [
+        "Designer1",
+        "Designer2"
+      ],
+      "size": [
+        "XXS",
+        "XS",
+        "S"
+      ],
+      "trend": [
+        "Bohemian"
+      ],
+      "color": [
+        "White",
+        "Green",
+        "Yellow",
+        "Black",
+        "Red",
+        "Blue"
+      ]
+    },
+    {
+      "id": "2",
+      "path_img": "images/products/img2.jpg",
+      "name": "Mango  People  T-shirt3",
+      "cost": "62.00",
+      "id_category": "1",
+      "range": "5",
+      "category_name": [
+        "Denim",
+        "Hoodies"
+      ],
+      "brand": [
+        "Mango2",
+        "Mango3"
+      ],
+      "designer": [
+        "Designer3"
+      ],
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "trend": [
+        "Floral"
+      ],
+      "color": [
+        "White",
+        "Green"
+      ]
+    },
+    {
+      "id": "3",
+      "path_img": "images/products/img3.jpg",
+      "name": "Mango  People  T-shirt5",
+      "cost": "72.00",
+      "id_category": "2",
+      "range": "4",
+      "category_name": [
+        "Jackets",
+        "Pants"
+      ],
+      "brand": [
+        "Mango4",
+        "Mango5"
+      ],
+      "designer": [
+        "Designer4"
+      ],
+      "size": [
+        "XXS",
+        "XS",
+        "XXL"
+      ],
+      "trend": [
+        "Floral",
+        "Lace"
+      ],
+      "color": [
+        "Yellow",
+        "Black"
+      ]
+    },
+    {
+      "id": "4",
+      "path_img": "images/products/img4.jpg",
+      "name": "Mango  People  T-shirt8",
+      "cost": "152.00",
+      "id_category": "1",
+      "range": "3.5",
+      "category_name": [
+        "Polos",
+        "Shirts"
+      ],
+      "brand": [
+        "Mango"
+      ],
+      "designer": [
+        "Designer1"
+      ],
+      "size": [
+        "XXS",
+        "XS",
+        "S"
+      ],
+      "trend": [
+        "Floral1",
+        "Lace1"
+      ],
+      "color": [
+        "Red",
+        "Blue"
+      ]
+    },
+    {
+      "id": "5",
+      "path_img": "images/products/img5.jpg",
+      "name": "Mango  People  T-shirt4",
+      "cost": "252.00",
+      "id_category": "1",
+      "range": "5",
+      "category_name": [
+        "Shoes",
+        "Shorts"
+      ],
+      "brand": [
+        "Mango1"
+      ],
+      "designer": [
+        "Designer2"
+      ],
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "trend": [
+        "Floral1",
+        "Bohemian1"
+      ],
+      "color": [
+        "Ping",
+        "Orange",
+        "Dark blue"
+      ]
+    },
+    {
+      "id": "6",
+      "path_img": "images/products/img6.jpg",
+      "name": "Mango  People  T-shirt5",
+      "cost": "352.00",
+      "id_category": "2",
+      "range": "4.5",
+      "category_name": [
+        "Sweaters",
+        "TShirts"
+      ],
+      "brand": [
+        "Mango2"
+      ],
+      "designer": [
+        "Designer3"
+      ],
+      "size": [
+        "XXL",
+        "XXS",
+        "XS",
+        "S"
+      ],
+      "trend": [
+        "Floral",
+        "Bohemian"
+      ],
+      "color": [
+        "Brown",
+        "Green"
+      ]
+    },
+    {
+      "id": "7",
+      "path_img": "images/products/img7.jpg",
+      "name": "Mango  People  T-shirt0",
+      "cost": "350.00",
+      "id_category": "1",
+      "range": "4",
+      "category_name": [
+        "Tanks",
+        "TShirts"
+      ],
+      "brand": [
+        "Mango3"
+      ],
+      "designer": [
+        "Designer4"
+      ],
+      "size": [
+        "XXS",
+        "XS",
+        "S"
+      ],
+      "trend": [
+        "Lace"
+      ],
+      "color": [
+        "White",
+        "Black"
+      ]
+    },
+    {
+      "id": "8",
+      "path_img": "images/products/img8.jpg",
+      "name": "Mango  People  T-shirt315",
+      "cost": "400.00",
+      "id_category": "2",
+      "range": "5",
+      "category_name": [
+        "Shoes",
+        "Pants"
+      ],
+      "brand": [
+        "Mango4"
+      ],
+      "designer": [
+        "Designer1"
+      ],
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ],
+      "trend": [
+        "Lace1"
+      ],
+      "color": [
+        "White",
+        "Green",
+        "Yellow",
+        "Black",
+        "Red",
+        "Blue"
+      ]
+    },
+    {
+      "id": "9",
+      "path_img": "images/products/img9.jpg",
+      "name": "Mango  People  T-shirt225",
+      "cost": "300.00",
+      "id_category": "2",
+      "range": "3",
+      "category_name": [
+        "Hoodies",
+        "Denim"
+      ],
+      "brand": [
+        "Mango5"
+      ],
+      "designer": [
+        "Designer2"
+      ],
+      "size": [
+        "XXL",
+        "XS",
+        "S"
+      ],
+      "trend": [
+        "Floral",
+        "Bohemian"
+      ],
+      "color": [
+        "Beige",
+        "Aquamarine",
+        "Bronze"
+      ]
+    },
+    {
+      "id": "10",
+      "path_img": "images/products/img10.jpg",
+      "name": "Mango  People  T-shirt1",
+      "cost": "200.00",
+      "id_category": "2",
+      "range": "2",
+      "category_name": [
+        "Bags",
+        "Accessories"
+      ],
+      "brand": [
+        "Mango"
+      ],
+      "designer": [
+        "Designer3"
+      ],
+      "size": [
+        "XXS",
+        "XS",
+        "S"
+      ],
+      "trend": [
+        "Floral1",
+        "Bohemian1"
+      ],
+      "color": [
+        "Goldenrod",
+        "Indigo",
+        "Firebrick"
+      ]
+    },
+    {
+      "id": "11",
+      "path_img": "images/products/img11.jpg",
+      "name": "Mango  People  T-shirt0",
+      "cost": "100.00",
+      "id_category": "2",
+      "range": "5",
+      "category_name": [
+        "Jackets",
+        "Pants"
+      ],
+      "brand": [
+        "Mango1"
+      ],
+      "designer": [
+        "Designer4"
+      ],
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "trend": [
+        "Floral",
+        "Lace1"
+      ],
+      "color": [
+        "Salmon",
+        "Copper",
+        "Aqua"
+      ]
+    },
+    {
+      "id": "12",
+      "path_img": "images/products/img12.jpg",
+      "name": "Mango  People  T-shirt13",
+      "cost": "250.00",
+      "id_category": "2",
+      "range": "1",
+      "category_name": [
+        "Jackets",
+        "Pants"
+      ],
+      "brand": [
+        "Mango2"
+      ],
+      "designer": [
+        "Designer1"
+      ],
+      "size": [
+        "XXS",
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
+      "trend": [
+        "Floral1",
+        "Lace"
+      ],
+      "color": [
+        "Purple",
+        "Terracotta",
+        "Magenta"
+      ]
+    },
+    {
+      "id": "13",
+      "path_img": "images/products/img13.jpg",
+      "name": "Mango  People  T-shirt2",
+      "cost": "220.00",
+      "id_category": "2",
+      "range": "5",
+      "category_name": [
+        "Bags",
+        "Accessories"
+      ],
+      "brand": [
+        "Mango3"
+      ],
+      "designer": [
+        "Designer2"
+      ],
+      "size": [
+        "XXS",
+        "XS",
+        "S",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "trend": [
+        "Floral",
+        "Lace1",
+        "Bohemian"
+      ],
+      "color": [
+        "Amber",
+        "Seagreen",
+        "Pistachio"
+      ]
+    },
+    {
+      "id": "14",
+      "path_img": "images/products/img14.jpg",
+      "name": "Mango  People  T-shirt3",
+      "cost": "110.00",
+      "id_category": "2",
+      "range": "4.5",
+      "category_name": [
+        "Tanks",
+        "TShirts"
+      ],
+      "brand": [
+        "Mango4"
+      ],
+      "designer": [
+        "Designer3"
+      ],
+      "size": [
+        "XXS",
+        "XS",
+        "S"
+      ],
+      "trend": [
+        "Floral1",
+        "Lace",
+        "Bohemian1"
+      ],
+      "color": [
+        "Ivory",
+        "Light",
+        "Peach"
+      ]
+    },
+    {
+      "id": "15",
+      "path_img": "images/products/img15.jpg",
+      "name": "Mango  People  T-shirt4",
+      "cost": "100.00",
+      "id_category": "1",
+      "range": "4",
+      "category_name": [
+        "Polos",
+        "Shirts"
+      ],
+      "brand": [
+        "Mango5"
+      ],
+      "designer": [
+        "Designer4"
+      ],
+      "size": [
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "trend": [
+        "Floral1"
+      ],
+      "color": [
+        "Raspberry",
+        "Lemon",
+        "Azure"
+      ]
+    }
+  ],
+  "cart": [
+    {
+      "id": "14",
+      "path_img": "images/products/img14.jpg",
+      "name": "Mango  People  T-shirt3",
+      "cost": "110.00",
+      "id_category": "2",
+      "range": "4.5",
+      "quantity": "1",
+      "color": "Ivory",
+      "size": "XXS"
+    },
+    {
+      "id": "10",
+      "path_img": "images/products/img10.jpg",
+      "name": "Mango  People  T-shirt1",
+      "cost": "200.00",
+      "id_category": "2",
+      "range": "2",
+      "quantity": "2",
+      "color": "Goldenrod",
+      "size": "XXS"
+    },
+    {
+      "id": "13",
+      "path_img": "images/products/img13.jpg",
+      "name": "Mango  People  T-shirt2",
+      "cost": "220.00",
+      "id_category": "2",
+      "range": "5",
+      "quantity": "1",
+      "color": "Seagreen",
+      "size": "XXS"
+    }
+  ]
+}
